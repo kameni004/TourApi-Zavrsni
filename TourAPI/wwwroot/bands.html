@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Upravljaj Bendovima</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="bandsPage">
+    <header>
+        <h1>Upravljaj Bendovima</h1>
+    </header>
+    <nav>
+        <a href="index.html">Pregled Toura</a>
+        <a href="tours.html">Upravljaj Tourima</a>
+    </nav>
+    <main>
+        <h2>Lista Bendova</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Naziv Benda</th>
+                    <th>Akcije</th>
+                </tr>
+            </thead>
+            <tbody id="bandTableBody"></tbody>
+        </table>
+
+        <h2>Dodaj / Izmjeni Bend</h2>
+        <form id="bandForm">
+            <input type="hidden" id="bandId">
+            <label for="bandName">Naziv Benda:</label>
+            <input type="text" id="bandName" required>
+            <label for="bandDescription">Opis:</label>
+            <textarea id="bandDescription" rows="2" placeholder="Unesite opis benda..."></textarea>
+            <label for="bandGenre">Žanr:</label>
+            <input type="text" id="bandGenre" required>
+            <button type="submit" class="submit">Spremi</button>
+            <button type="button" id="cancelBandEdit">Otkaži</button>
+        </form>
+    </main>
+    <footer>
+        &copy; 2024 TourAPI
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

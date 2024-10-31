@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Upravljaj Turnejama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="manageTourPage">
+    <header>
+        <h1>Upravljaj Turnejama</h1>
+    </header>
+    <nav>
+        <a href="index.html">Pregled Turneja</a>
+        <a href="tours.html">Upravljaj Turnejama</a>
+    </nav>
+    <main>
+        <h2>Turneja: <span id="tourNameDisplay"></span></h2>
+
+        <h3>Lista Koncerata</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Datum</th>
+                    <th>Lokacija</th>
+                    <th>Grad</th>
+                    <th>Akcije</th>
+                </tr>
+            </thead>
+            <tbody id="tourDatesTableBody"></tbody>
+        </table>
+
+        <h3>Dodaj / Izmjeni Koncert</h3>
+        <form id="tourDateForm">
+            <input type="hidden" id="tourDateId">
+            <label for="tourDate">Datum:</label>
+            <input type="date" id="tourDate" required>
+            <label for="venue">Lokacija:</label>
+            <input type="text" id="venue" required>
+            <label for="city">Grad:</label>
+            <input type="text" id="city" required>
+            <button type="submit" class="submit">Spremi</button>
+            <button type="button" id="cancelTourDateEdit">Otkaži</button>
+        </form>
+    </main>
+    <footer>
+        &copy; 2024 TourAPI
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

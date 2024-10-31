@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <title>Upravljaj Turnejama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="toursPage">
+    <header>
+        <h1>Upravljaj Turnejama</h1>
+    </header>
+    <nav>
+        <a href="index.html">Pregled Turneja</a>
+        <a href="bands.html">Upravljaj Bendovima</a>
+    </nav>
+    <main>
+        <h2>Lista Turneja</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Naziv Turneje</th>
+                    <th>Bend</th>
+                    <th>Akcije</th>
+                </tr>
+            </thead>
+            <tbody id="tourTableBody"></tbody>
+        </table>
+
+        <h2>Dodaj / Izmjeni Turneju</h2>
+        <form id="tourForm">
+            <input type="hidden" id="tourId">
+            <label for="tourName">Naziv:</label>
+            <input type="text" id="tourName" required>
+            <label for="bandId">Bend:</label>
+            <select id="bandId" required></select>
+            <label for="description">Opis:</label>
+            <textarea id="description" rows="2" placeholder="Unesite opis turneje..."></textarea>
+            <button type="submit">Spremi</button>
+            <button type="button" id="cancelTourEdit">Otkaži</button>
+        </form>
+    </main>
+    <footer>
+        &copy; 2024 TourAPI
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
